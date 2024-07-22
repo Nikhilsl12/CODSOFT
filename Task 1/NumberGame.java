@@ -5,6 +5,7 @@ public class NumberGame {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         Random random = new Random();
+        int score=0;
         int attempts = 5;
         boolean check = true;
 
@@ -16,7 +17,7 @@ public class NumberGame {
         for (int attempt = 1; attempt <= attempts; attempt++) {
             System.out.print("\nEnter your guess: ");
             int userGuess = sc.nextInt();
-
+            score = 100-(100/attempt)*(attempt-1);
             if (userGuess == generatedNumber) {
                 System.out.println("Congratulations! You guessed it right!");
                 check = false;
@@ -27,10 +28,12 @@ public class NumberGame {
                 System.out.println("Try a lower number.");
             }
         }
-
+        
         if(check){
             System.out.println("\nThe correct number was: " + generatedNumber);
         }
+        System.out.println("Your score is " + (check?0:score));
         System.out.println("Thanks for playing!");
+        
     }
 }
