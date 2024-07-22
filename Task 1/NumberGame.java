@@ -34,6 +34,6 @@ public class NumberGame {
         }
         System.out.println("Your score is " + (check?0:score));
         System.out.println("Thanks for playing!");
-        
+        sc.close();
     }
 }
