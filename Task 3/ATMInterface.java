@@ -19,12 +19,12 @@ public class ATMInterface {
 
             switch (choice) {
                 case 1:
-                    System.out.print("Enter amount to withdraw: ");
+                    System.out.print("Enter amount to withdraw: ₹");
                     double withdrawAmount = scanner.nextDouble();
                     atm.withdraw(withdrawAmount);
                     break;
                 case 2:
-                    System.out.print("Enter amount to deposit: ");
+                    System.out.print("Enter amount to deposit: ₹");
                     double depositAmount = scanner.nextDouble();
                     atm.deposit(depositAmount);
                     break;
