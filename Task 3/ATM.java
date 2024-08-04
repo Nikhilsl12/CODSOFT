@@ -8,7 +8,7 @@ public class ATM {
     public void withdraw(double amount) {
         if (amount > 0 && amount <= account.getBalance()) {
             account.withdraw(amount);
-            System.out.println("Withdrawal successful. New balance: ₹" + account.getBalance());
+            System.out.println("Withdrawal successful. New balance: " + account.getBalance());
         } else {
             System.out.println("Insufficient balance or invalid amount.");
         }
@@ -17,7 +17,7 @@ public class ATM {
     public void deposit(double amount) {
         if (amount > 0) {
             account.deposit(amount);
-            System.out.println("Deposit successful. New balance: ₹" + account.getBalance());
+            System.out.println("Deposit successful. New balance: " + account.getBalance());
         } else {
             System.out.println("Invalid deposit amount.");
         }
